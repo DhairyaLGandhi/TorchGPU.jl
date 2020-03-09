@@ -5,8 +5,8 @@ greet() = print("Hello World!")
 using Torch, CuArrays
 
 
-function ATen.tensor(x::CuArray; dev = 0)
-  ATen.from_blob(x, dev = dev)
+function Torch.tensor(x::CuArray; dev = 0)
+  Torch.from_blob(x, dev = dev)
 end
 
 Cassette.@context TorchCtx
