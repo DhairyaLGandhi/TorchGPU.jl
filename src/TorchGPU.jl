@@ -9,4 +9,12 @@ function ATen.tensor(x::CuArray; dev = 0)
   ATen.from_blob(x, dev = dev)
 end
 
+Cassette.@context TorchCtx
+
+using Torch.NNlib
+
+function Cassette.overdub(ctx::TorchCtx, f, args...)
+  f(Torch.to_tensor.(args)...)
+end
+
 end # module
