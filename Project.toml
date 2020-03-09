@@ -1,0 +1,9 @@
+name = "TorchGPU"
+uuid = "7b82d6ec-f7cf-4db7-9fb8-38b752474330"
+authors = ["dhairyagandhi96 "]
+version = "0.1.0"
+
+[deps]
+Cassette = "7057c7e9-c182-5462-911a-8362d720325c"
+CuArrays = "3a865a2d-5b23-5a0f-bc46-62713ec82fae"
+Torch = "6a2ea274-3061-11ea-0d63-ff850051a295"
