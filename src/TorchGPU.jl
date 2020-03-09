@@ -3,6 +3,7 @@ module TorchGPU
 greet() = print("Hello World!")
 
 using Torch, CuArrays
+using Cassette
 
 
 function Torch.tensor(x::CuArray; dev = 0)
