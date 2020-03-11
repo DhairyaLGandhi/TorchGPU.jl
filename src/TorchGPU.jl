@@ -18,4 +18,9 @@ function Cassette.overdub(ctx::TorchCtx, f, args...)
   f(Torch.to_tensor.(args)...)
 end
 
+function withtorch(f)
+  ctx = TorchCtx()
+  Cassette.overdub(ctx, f)
+end
+
 end # module
